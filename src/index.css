@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Workbench&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    font-family: "Poppins", sans-serif;
+  }
+  h2 {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@layer utilities {
+  .boxshadow {
+    box-shadow: 0 0 5px #03e9f4, 0 0 20px #03e9f4, 0 0 5px #03e9f4, 0 0 10px;
+  }
+}
+
+.btn {
+  border: 2px solid #ffffff;
+  color: white;
+  background: none;
+  padding: 10px 50px;
+  font-size: 25px;
+  font-weight: 850;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submit-btn {
+  border: 1.5px solid #ffffff;
+  letter-spacing: 1.5px;
+  color: white;
+  background: none;
+  padding: 4px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.add-btn {
+  border: 1.5px solid #ffffff;
+  letter-spacing: 1.5px;
+  color: white;
+  background: none;
+  padding: 4px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.add-btn {
+  border: 1.5px solid #ffffff;
+  letter-spacing: 1.5px;
+  color: white;
+  background: none;
+  padding: 4px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submit-btn:hover {
+  color: black;
+}
+.add-btn:hover {
+  color: black;
+}
+
+.add-btn:hover {
+  color: black;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff8f8;
+  transition: 0.5s;
+  z-index: -1;
+}
+.add-btn::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 0;
+  background: #fff8f8;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.btn::before {
+  left: 0;
+  top: 0;
+}
+
+.submit-btn::before {
+  right: 0;
+  top: 0;
+}
+.add-btn::before {
+  top: 0;
+}
+
+.add-btn::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 0;
+  background: #fff8f8;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.add-btn::before {
+  top: 0;
+}
+
+.btn:hover::before {
+  width: 180%;
+}
+
+.submit-btn:hover::before {
+  width: 180%;
+}
+.add-btn:hover::before {
+  height: 180%;
+}
+
+.add-btn:hover::before {
+  height: 180%;
+}
+
+.select {
+  background-color: rgb(55 65 81);
+  opacity: 20;
+  color: #fff;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.arrow {
+  width: 25px;
+  height: 25px;
+  border-top: 6px solid #fff;
+  border-left: 6px solid #fff;
+  transform: rotate(-45deg);
+  animation: arrow-load 1s infinite;
+}
+
+.arrow:nth-child(3) {
+  left: 25px;
+  animation-delay: -0.4s;
+}
+.arrow:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow:nth-child(1) {
+  right: 25px;
+}
+
+@keyframes arrow-load {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(60px 60px);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(-60px -60px);
+  }
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.anchor {
+  position: relative;
+  padding: 0px 8px;
+}
+
+.anchor:hover {
+  color: #ffffff;
+  transition: 0.2s;
+}
+.anchor::after {
+  content: "";
+  position: absolute;
+  background-color: #78909c;
+  height: 3.5px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.2s;
+}
+
+.anchor:hover::after {
+  width: 100%;
+}
+
+.input-box input {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.input-box2 input {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.input-box3 input {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.input-box span {
+  position: absolute;
+  left: 17px;
+  padding: 2px;
+  top: 5px;
+  font-size: 20px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+
+.input-box2 span {
+  position: absolute;
+  left: 17px;
+  padding: 2px;
+  top: 5px;
+  font-size: 20px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+.input-box3 span {
+  position: absolute;
+  left: 17px;
+  padding: 2px;
+  top: 5px;
+  font-size: 20px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span {
+  transform: translateX(5px) translateY(-30px);
+  font-size: 15px;
+  background: #111827;
+  opacity: 20;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+.input-box input:valid ~ span,
+.input-box input:focus ~ span {
+  transform: translateX(5px) translateY(-30px);
+  font-size: 15px;
+  background: #111827;
+  opacity: 20;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.input-box2 input:valid ~ span,
+.input-box2 input:focus ~ span {
+  transform: translateX(5px) translateY(-30px);
+  font-size: 15px;
+  background: #111827;
+  opacity: 20;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+.input-box3 input:valid ~ span,
+.input-box3 input:focus ~ span {
+  transform: translateX(5px) translateY(-30px);
+  font-size: 15px;
+  background: #111827;
+  opacity: 20;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.outer-div {
+  position: relative;
+  background: repeating-conic-gradient(
+    from 30deg,
+    #01dbc2 0%,
+    #01dbc2 10%,
+    transparent 50%
+  );
+}
+
+.select {
+  background-color: rgb(55 65 81);
+  opacity: 20;
+  color: #fff;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
