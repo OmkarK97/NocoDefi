@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import {
     useAccount,
@@ -91,7 +91,7 @@ const TokenMintingPage = () => {
                             {isPendingNext ? "Minting" : "Mint"}
                         </button>
 
-                        <a onClick={handleCopyClick} className="font-medium text-center text-blue-600 dark:text-blue-500 hover:underline">
+                        <a onClick={handleCopyClick} className="cursor-pointer font-medium text-center text-blue-600 dark:text-blue-500 hover:underline">
                             Copy Token Address
                         </a>
 

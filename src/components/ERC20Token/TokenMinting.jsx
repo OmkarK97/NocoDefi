@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MintLoader from "./MintLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -58,8 +58,8 @@ const TokenMinting = ({
               {isPendingNext ? "Minting" : "Mint"}
             </button>
 
-            <a className="font-medium text-center text-blue-600 dark:text-blue-500 hover:underline" href={`https://mumbai.polygonscan.com/tx/${hashSubmit}`} target="_blank">
-              View on PolyScan
+            <a className="font-medium text-center text-blue-600 dark:text-blue-500 hover:underline" href={`https://testnet.bscscan.com/tx/${hashSubmit}`} target="_blank">
+              View on BscScan
             </a>
 
             {isConfirmingNext && (

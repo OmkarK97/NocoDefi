@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import {
   useAccount,
@@ -12,7 +12,7 @@ import TokenForm from "./TokenForm";
 import TokenMinting from "./TokenMinting";
 import SaveToDB from "./SaveToDB";
 import ERC20DB from "./ERC20DB";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const ERC20Token = () => {
   const { address } = useAccount(); 
@@ -72,9 +72,9 @@ const ERC20Token = () => {
     try {
       writeContractSubmit({
         abi,
-        address: "0x360E40E234B94a6E549ae9080E0CBe03Aaa43CA9",
+        address: "0x55a9d74D03C11dF60469e96abd2Aa4D56f26aDb5",
         functionName: "createToken",
-        args: [tokenName, symbol, decimal, address],
+        args: [tokenName, symbol, decimal, address]
       });
     } catch (error) {
       console.error("Error executing contract:", error);
@@ -132,7 +132,7 @@ const ERC20Token = () => {
       }
     };
     fetchTokenAddress();
-  }, [hashSubmit, isConfirmedSubmit]);
+  }, [hashSubmit, isConfirmedSubmit, tokenData]);
 
   const parseVal = () => {
     const num = ethers.utils.parseUnits(supply.toString(), decimal);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 // import ERC20Token from './ERC20Token';
 
 const ERC20DB = () => {

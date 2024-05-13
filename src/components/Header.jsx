@@ -1,4 +1,3 @@
-import React from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import logo from "../assets/new.png";
 import { Link } from 'react-router-dom'
