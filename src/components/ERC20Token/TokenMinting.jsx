@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MintLoader from "./MintLoader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TokenAdder from "../TokenAdder";
 
 const TokenMinting = ({
   handleSubmit_next,
@@ -10,7 +11,8 @@ const TokenMinting = ({
   isPendingNext,
   isConfirmingNext,
   isConfirmedNext,
-  hashSubmit
+  hashSubmit,
+  tokenAdd
 }) => {
   const [minted, setminted] = useState(true);
 
@@ -58,9 +60,12 @@ const TokenMinting = ({
               {isPendingNext ? "Minting" : "Mint"}
             </button>
 
+            <div className="flex justify-around">
             <a className="font-medium text-center text-blue-600 dark:text-blue-500 hover:underline" href={`https://testnet.bscscan.com/tx/${hashSubmit}`} target="_blank">
               View on BscScan
             </a>
+            <TokenAdder address={tokenAdd}/> 
+            </div>
 
             {isConfirmingNext && (
               <>

@@ -29,6 +29,8 @@ const ERC20Token = () => {
     isPending: isPendingSubmit,
   } = useWriteContract();
 
+  console.log(hashSubmit)
+
   const [tokenAdd, setTokenAdd] = useState("");
   const [decimal, setDecimal] = useState("");
   const [tokenName, setTokenName] = useState("");
@@ -165,6 +167,7 @@ const ERC20Token = () => {
             isPendingNext={isPendingNext}
             isConfirmingNext={isConfirmingNext}
             isConfirmedNext={isConfirmedNext}
+            tokenAdd={tokenAdd}
           />
         )}
 
